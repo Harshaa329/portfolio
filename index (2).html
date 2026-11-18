@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harshaa Harshini | AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#0a0f1e;--panel:#111a30;--line:#25314f;--text:#e7ebf6;--muted:#8d97b3;--acc:#7a86ff;--acc2:#3de0cf;--warn:#ff8a7a;color-scheme:dark;
+--sans:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f7fc;--panel:#fff;--line:#d6dcec;--text:#12182b;--muted:#59627d;--acc:#4452e0;--acc2:#0a8f82;--warn:#c4412f;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f5f7fc;--panel:#fff;--line:#d6dcec;--text:#12182b;--muted:#59627d;--acc:#4452e0;--acc2:#0a8f82;--warn:#c4412f;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0a0f1e;--panel:#111a30;--line:#25314f;--text:#e7ebf6;--muted:#8d97b3;--acc:#7a86ff;--acc2:#3de0cf;--warn:#ff8a7a;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;background-attachment:fixed}
+body::after{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 50% 0,transparent 0,var(--bg) 75%);z-index:-1;pointer-events:none}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc2);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+.logo{font:500 14px var(--mono);text-decoration:none;color:var(--acc2)}
+nav{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--text)}
+#theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px}
+@media(max-width:640px){nav a{display:none}}
+section{padding:84px 0 12px}
+h2{font:700 28px/1.2 var(--sans);margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 36px;max-width:60ch}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding-top:72px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+h1{font:700 clamp(38px,6vw,64px)/1.04 var(--sans);letter-spacing:-.03em;margin:0 0 18px}
+.role{font:500 14px var(--mono);color:var(--acc2);margin:0 0 18px}
+.lead{color:var(--muted);max-width:50ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line)}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+button.btn{font-family:inherit;cursor:pointer;background:none;color:var(--text)}button.btn.pri{background:var(--acc);color:#fff}.btn:hover{border-color:var(--acc2)}
+.meta{margin-top:26px;font:400 13px var(--mono);color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
+/* rag demo */
+.term{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -30px #000a}
+.tbar{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);font:400 12px var(--mono);color:var(--muted)}
+.tbody{padding:16px 16px 14px;font:400 13px/1.5 var(--mono);min-height:292px}
+.q{color:var(--text);min-height:22px}.q b{color:var(--acc2);font-weight:500}
+.q i{display:inline-block;width:7px;height:14px;background:var(--acc2);vertical-align:-2px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.gate{margin:10px 0 12px;color:var(--muted);font-size:12px}
+.hit{display:grid;grid-template-columns:1fr 46px;gap:2px 10px;padding:9px 0;border-top:1px dashed var(--line);opacity:0;transform:translateY(4px);transition:.35s}
+.hit.on{opacity:1;transform:none}
+.hit .t{font-size:12.5px}.hit .tag{color:var(--acc);font-size:11px}
+.hit .s{text-align:right;color:var(--acc2)}
+.hit .bar{grid-column:1/3;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.hit .bar span{display:block;height:100%;width:0;background:var(--acc2);transition:width .6s .1s}
+.hit.deny .tag,.hit.deny .s{color:var(--warn)}.hit.deny .bar span{background:var(--warn)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 14px}
+.chip{font:400 12px var(--mono);background:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer}
+.chip[aria-pressed="true"]{color:var(--text);border-color:var(--acc);background:color-mix(in srgb,var(--acc) 16%,transparent)}
+.note{padding:0 16px 14px;font-size:11px;color:var(--muted);font-family:var(--mono)}
+/* projects */
+.feat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+@media(max-width:860px){.feat{grid-template-columns:1fr}}
+.feat h3{font-size:22px;margin:0 0 4px}
+.kick{font:400 12px var(--mono);color:var(--acc2);margin:0 0 12px}
+ul.pts{margin:12px 0 0;padding-left:18px;color:var(--muted)}ul.pts li{margin:6px 0}
+.flow{display:flex;flex-direction:column;gap:0;font:400 12px var(--mono);align-self:center}
+.flow div{border:1px solid var(--line);border-radius:8px;padding:8px 12px;background:var(--bg)}
+.flow div+div{margin-top:14px;position:relative}
+.flow div+div::before{content:"";position:absolute;left:24px;top:-15px;height:14px;border-left:1px solid var(--acc)}
+.flow .rb{border-color:var(--acc);color:var(--acc)}
+.feat{margin-top:18px}.feat.rev .flow{order:-1}@media(max-width:860px){.feat.rev .flow{order:0}}.card.wide{margin-top:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--panel)}
+.card h3{font-size:17px;margin:0 0 2px}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.pill{display:inline-block;font:400 11px var(--mono);border:1px solid var(--acc);color:var(--acc);border-radius:999px;padding:1px 9px;margin-left:6px;vertical-align:2px}
+.stat{font:500 13px var(--mono);color:var(--acc2);margin:12px 0 0}
+/* experience */
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 34px 28px}
+.job::before{content:"";position:absolute;left:-5px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--bg)}
+.job h3{margin:0;font-size:18px}.job .when{font:400 13px var(--mono);color:var(--muted);margin:2px 0 8px}
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.skills{grid-template-columns:1fr}}
+.sk{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--panel)}
+.sk h3{margin:0 0 12px;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font:400 12.5px var(--mono);border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:var(--text)}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.edu{grid-template-columns:1fr}}
+.contact{text-align:left;padding-bottom:40px}
+.contact a.big{font:600 clamp(20px,4vw,34px) var(--sans);color:var(--acc);text-decoration:none;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font:400 12px var(--mono);margin-top:40px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top">harshaa.ai</a>
+<nav aria-label="Primary"><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Toggle light and dark theme">◐</button></nav>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<p class="role">AI/ML engineer · Generative AI · Data science</p>
+<h1>Harshaa Harshini</h1>
+<p class="lead">I build retrieval-augmented applications, LLM-backed APIs and the data pipelines underneath them. MSc in Data Science and AI, with Distinction.</p>
+<div class="btns"><a class="btn pri" href="#work">See projects</a><a class="btn" href="https://github.com/Harshaa329" rel="noopener">GitHub</a><a class="btn" href="Harshaa-Harshini-resume.docx" download="Harshaa Harshini resume.docx">Download resume</a><a class="btn" href="#contact">Get in touch</a></div>
+<div class="meta"><span>Chennai, India</span><span>Python · FastAPI · FAISS · LangGraph</span></div>
+</div>
+<div class="term" aria-label="Interactive retrieval demo">
+<div class="tbar"><span>rag-demo / faiss.search(k=3)</span><span id="role">role: student</span></div>
+<div class="tbody"><div class="q" id="q"></div><div class="gate" id="gate"></div><div id="hits" aria-live="polite"></div></div>
+<div class="chips" id="chips" role="group" aria-label="Pick a query"></div>
+<div class="note">Illustrative output modelled on my dissertation chatbot.</div>
+</div>
+</div>
+
+<section id="work"><div class="wrap">
+<h2>Projects</h2>
+<p class="sub">Three featured systems, from a RAG chatbot with access control to a healthcare assistant and a retail analytics backend, plus a BERT model.</p>
+<article class="feat" style="margin-top:0">
+<div>
+<p class="kick">MSc dissertation · Two-tier RAG</p>
+<h3>University Student Support Chatbot</h3>
+<ul class="pts">
+<li>Routes each question between public university information and personalized academic records for students, lecturers and administrators.</li>
+<li>Semantic retrieval with BAAI BGE-Large (1,024-dimensional embeddings) and FAISS IndexFlatIP, using chunking, metadata and top-k similarity search.</li>
+<li>Role-based access control runs before generation. Generation uses the Groq API with Llama 3.1.</li>
+<li>Evaluated with Precision@5, Recall@5 and access-validation tests.</li>
+</ul>
+</div>
+<div class="flow" aria-label="Pipeline: query, router, access check, FAISS retrieval, Llama 3.1 answer">
+<div>query</div><div>tier router · public / personal</div><div class="rb">role-based access check</div><div>BGE-Large → FAISS top-k</div><div>Llama 3.1 via Groq → answer</div>
+</div>
+</article>
+<article class="feat rev">
+<div>
+<p class="kick">Full-stack pilot · Conversational AI</p>
+<h3>Healthcare Conversational Assistant</h3>
+<ul class="pts">
+<li>Python FastAPI backend with REST endpoints, integrated with Groq-hosted Llama 3.3 70B for conversational responses.</li>
+<li>Doctor availability lookup, appointment booking and rescheduling on PostgreSQL with SQLAlchemy Core.</li>
+<li>Next.js 14, React and Tailwind CSS front end, demonstrated on mock healthcare data with the backend running locally.</li>
+</ul>
+</div>
+<div class="flow" aria-label="Pipeline: patient message, Next.js, FastAPI, Llama 3.3 70B, availability lookup, booking in PostgreSQL">
+<div>patient message · Next.js 14</div><div>FastAPI REST endpoints</div><div class="rb">Llama 3.3 70B via Groq → intent</div><div>availability lookup</div><div>book / reschedule · PostgreSQL</div>
+</div>
+</article>
+<article class="feat">
+<div>
+<p class="kick">In progress · Supermarket analytics</p>
+<h3>Retail Intelligence</h3>
+<ul class="pts">
+<li>FastAPI and PostgreSQL foundation with Alembic migrations for retailer, branch, product and point-of-sale receipt-line data.</li>
+<li>Deterministic 90-day synthetic pilot dataset: 2 branches, 150 products and about 72,000 receipt lines, with daily-sales insights and baseline forecast endpoints.</li>
+<li>CSV validation and preview, plus an isolated transactional POS import prototype. A LangGraph agent layer for demand and inventory workflows is designed next.</li>
+</ul>
+</div>
+<div class="flow" aria-label="Pipeline: POS CSV, validation, transactional import, PostgreSQL, insights and forecasts, planned LangGraph agent">
+<div>POS CSV · validate + preview</div><div>transactional import</div><div class="rb">PostgreSQL + Alembic</div><div>daily insights · baseline forecast</div><div>LangGraph agent (planned)</div>
+</div>
+</article>
+<div class="card wide"><h3>Sentiment Analysis System</h3><p>Fine-tuned BERT classifier with custom preprocessing and tokenization, served through a FastAPI microservice for real-time inference.</p><p class="stat">92.8% accuracy · 0.98 ROC-AUC</p></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<p class="sub">Enterprise data work in banking and insurance.</p>
+<div class="tl">
+<div class="job"><h3>AI/ML Engineer, Tata Consultancy Services</h3><div class="when">Sep 2026 – Nov 2026 · India</div>
+<ul class="pts"><li>Led customer attrition analysis and reporting for banking stakeholders, with Power BI dashboards that surfaced retention trends and actionable segments.</li>
+<li>Prepared and validated structured and semi-structured data (PDFs, OCR outputs, JSON) with Python and SQL, fixing missing values, duplicates and inconsistent formats.</li>
+<li>Built configurable YAML quality checks, Bronze/Silver/Gold data layers and credit, debit and net-balance aggregation.</li></ul></div>
+<div class="job"><h3>Graduate Engineer, Guardian Life</h3><div class="when">Jun 2020 – Oct 2021</div>
+<ul class="pts"><li>Extracted and prepared records with Python and SQL across AWS-based data systems, then validated them with requestors.</li>
+<li>Investigated production data issues and resolved 15–20 support requests per day within service-level commitments.</li></ul></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<p class="sub">The tools I use day to day.</p>
+<div class="skills">
+<div class="sk"><h3>Generative AI and APIs</h3><div class="tags"><span>RAG</span><span>LLMs</span><span>BAAI BGE-Large</span><span>FAISS</span><span>Groq API</span><span>Llama 3.1/3.3</span><span>LangChain</span><span>LangGraph</span><span>FastAPI</span><span>REST</span></div></div>
+<div class="sk"><h3>AI and machine learning</h3><div class="tags"><span>Machine Learning</span><span>NLP</span><span>BERT</span><span>LSTM</span><span>SARIMA</span><span>Clustering</span><span>Model evaluation</span></div></div>
+<div class="sk"><h3>Programming and data</h3><div class="tags"><span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span><span>Seaborn</span><span>Power BI</span><span>JSON</span><span>YAML</span><span>OCR</span></div></div>
+<div class="sk"><h3>Data platforms</h3><div class="tags"><span>AWS</span><span>ETL</span><span>Medallion architecture</span><span>Data quality</span><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>Terraform</span><span>Git</span></div></div>
+</div>
+<h2 style="margin-top:56px">Education</h2>
+<div class="edu" style="margin-top:20px">
+<div class="card"><h3>MSc Data Science and AI</h3><p>University of Hull (Cambridge Group of Education), UK · Distinction · 2026</p></div>
+<div class="card"><h3>BTech Computer Science and Engineering</h3><p>SRM Institute of Science and Technology, Chennai · 2020</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<h2>Contact</h2>
+<p class="sub">Open to AI/ML engineering roles. Email is the fastest way to reach me.</p><p><a class="btn pri" href="Harshaa-Harshini-resume.docx" download="Harshaa Harshini resume.docx">Download resume (Word)</a></p>
+<a class="big" href="mailto:harshaa329harshini@gmail.com">harshaa329harshini@gmail.com</a>
+<p class="meta"><a href="tel:+919597667698">+91 95976 67698</a><a href="https://github.com/Harshaa329" rel="noopener">github.com/Harshaa329</a><span>Chennai, India</span></p>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Harshaa Harshini</div></footer>
+
+<script>
+(function(){
+var D=[
+{q:'Where do I find my exam timetable?',role:'student',gate:'access check: student → public + own records',r:[['public','Exam timetables and venues, Spring term',.87],['personal','Your registered modules, Semester 2',.81],['public','Resit and extenuating circumstances policy',.64]]},
+{q:'Show my grades for module DS7003',role:'student',gate:'access check: student → own records only',r:[['personal','Your DS7003 coursework and exam marks',.91],['public','How marks are moderated and released',.72],['public','Grade appeal procedure',.58]]},
+{q:'List every student’s grades',role:'student',gate:'access check: student → cohort records blocked',r:[['blocked','Cohort grade sheets: outside your role',.88],['public','How marks are moderated and released',.55],['public','Contact the programme office',.49]]}
+];
+var q=document.getElementById('q'),hits=document.getElementById('hits'),gate=document.getElementById('gate'),chips=document.getElementById('chips'),role=document.getElementById('role');
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,run=0,timers=[];
+function clr(){timers.forEach(clearTimeout);timers=[]}
+function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function show(i){
+ clr();var id=++run,d=D[i];hits.innerHTML='';gate.textContent='';role.textContent='role: '+d.role;
+ [].forEach.call(chips.children,function(c,j){c.setAttribute('aria-pressed',j===i)});
+ var n=0;
+ function type(){
+  if(id!==run)return;
+  q.innerHTML='<b>&gt;</b> '+esc(d.q.slice(0,n))+'<i></i>';
+  if(n<d.q.length){n+=reduce?d.q.length:1;timers.push(setTimeout(type,reduce?0:28))}else{rest()}
+ }
+ function rest(){
+  timers.push(setTimeout(function(){gate.textContent=d.gate;d.r.forEach(function(h,k){
+   timers.push(setTimeout(function(){
+    var e=document.createElement('div');e.className='hit'+(h[0]==='blocked'?' deny':'');
+    e.innerHTML='<div class="t"><span class="tag">['+h[0]+']</span> '+esc(h[1])+'</div><div class="s">'+(h[0]==='blocked'?'denied':h[2].toFixed(2))+'</div><div class="bar"><span></span></div>';
+    hits.appendChild(e);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){e.classList.add('on');e.querySelector('.bar span').style.width=(h[0]==='blocked'?100:h[2]*100)+'%'})});
+   },reduce?0:k*380));
+  })},reduce?0:250));
+ }
+ type();
+}
+D.forEach(function(d,i){var b=document.createElement('button');b.className='chip';b.type='button';b.textContent=d.q;b.onclick=function(){show(i)};chips.appendChild(b)});
+show(0);
+
+var t=document.getElementById('theme'),root=document.documentElement;
+t.onclick=function(){
+ var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':!matchMedia('(prefers-color-scheme: light)').matches;
+ root.setAttribute('data-theme',dark?'light':'dark');
+};
+})();
+</script>
+</body>
+</html>
